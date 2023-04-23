@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function AdBox (props){
     let formatedUrl = formatUrl(props.data.imageUrl);
@@ -7,7 +8,7 @@ export function AdBox (props){
         <>
         <div className="bg-[#FFEBEB] hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] transition ease-in-out delay-150 hover:-translate-y-2">
             <div className="w-full">
-                <img src={formatedUrl} className="w-full h-[300px] object-cover imageUrl" alt="" />
+                <img src={formatedUrl} className="w-full h-[250px] object-cover imageUrl" alt="" />
             </div>
             <div className="p-4 flex gap-2 flex-col justify-between">
                 <div>
@@ -17,7 +18,7 @@ export function AdBox (props){
                 <h2 className="primary-text text-[16px]">{props.data.primaryText}</h2>
                 <p className="discription text-[20px]">{props.data.description}</p>
                 <div className="text-center">
-                <a className="CTA url b-0 px-4 py-2 bg-[#000] text-[#fff] rounded" href={props.data.added[0].url}>{props.data.CTA}</a>
+                <Link className="CTA url b-0 px-4 py-2 bg-[#000] text-[#fff] rounded" to={props.data.added[0].url}>{props.data.CTA}</Link>
                 </div>
             </div>
         </div>
@@ -29,7 +30,7 @@ function formatUrl(url){
     console.log(url);
     let breakUrl = url.split("/");
     breakUrl = breakUrl[breakUrl.length-2];
-    if(breakUrl == "drive.google.com"){
+    if(breakUrl === "drive.google.com"){
         breakUrl = "17nXWIFT-63JLfEvBEuQiyDYmA2dckCmq"
     }
     console.log(breakUrl);
