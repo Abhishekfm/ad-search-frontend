@@ -24,11 +24,13 @@ function App() {
       }
     } catch (error) {
       console.log(error);
+
     }
   }
 
   return (
-    <div>
+    <div className='text-center'>
+      <h1 className='text-[40px] drop-shadow-lg font-bold uppercase'>Search Ad</h1>
       <div className='flex w-full justify-center p-2'>
       <div className="App w-1/2">
         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
