@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export function AdBox (props){
     let formatedUrl = formatUrl(props.data.imageUrl);
@@ -18,7 +17,7 @@ export function AdBox (props){
                 <h2 className="primary-text text-[16px]">{props.data.primaryText}</h2>
                 <p className="discription text-[20px]">{props.data.description}</p>
                 <div className="text-center">
-                <Link className="CTA url b-0 px-4 py-2 bg-[#000] text-[#fff] rounded" to={props.data.added[0].url}>{props.data.CTA}</Link>
+                <a className="CTA url b-0 px-4 py-2 bg-[#000] text-[#fff] rounded" target="_blank" rel="noopener noreferrer" href={"https://www."+props.data.added[0].url}>{props.data.CTA}</a>
                 </div>
             </div>
         </div>

@@ -35,7 +35,7 @@ function App() {
         <h1 className='text-[40px] drop-shadow-lg font-bold uppercase'>Search Ad</h1>
       </div>
       <div className='flex w-full justify-center p-2'>
-      <div className="App w-1/2">
+      <div className="App w-full md:w-1/2">
         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
         <div class="relative">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -46,7 +46,7 @@ function App() {
         </div>
     </div>
     </div>
-    <div className='grid grid-cols-3 h-[800px] p-4 gap-4'>
+    <div className='grid md:grid-cols-3 grid-cols-1 sm:grid-cols-2 h-[800px] p-4 gap-4'>
       {res.map((ele)=>
         <AdBox data={ele} />
       )
